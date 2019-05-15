@@ -1,0 +1,18 @@
+#gridContainer{
+    display: grid;
+    grid-template: repeat(16, 1fr) / repeat(16, 1fr);
+    height: 550px;
+    width: 550px;
+    grid-gap: 1px;
+    padding-top: 120px;
+}
+
+.box{
+    border: 1px solid black;
+}
+
+.center-align{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
