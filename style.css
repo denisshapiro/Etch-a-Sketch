@@ -4,15 +4,45 @@
     height: 550px;
     width: 550px;
     grid-gap: 1px;
-    padding-top: 120px;
+    padding-top: 70px;
 }
 
 .box{
-    border: 1px solid black;
+    border: 1px solid rgb(158, 158, 158);
 }
 
 .center-align{
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+#reset {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: rgb(207, 50, 50);
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  #reset:hover {background-color:  
+    rgb(199, 82, 82);
+}
+  
+  #reset:active {
+    background-color: rgb(199, 82, 82);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+#controls{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 40px;
 }
