@@ -1,10 +1,10 @@
 #gridContainer{
     display: grid;
     grid-template: repeat(16, 1fr) / repeat(16, 1fr);
-    height: 550px;
-    width: 550px;
+    height: 600px;
+    width: 600px;
     grid-gap: 1px;
-    padding-top: 70px;
+    padding-top: 50px;
 }
 
 .box{
@@ -28,14 +28,14 @@
     background-color: rgb(207, 50, 50);
     border-radius: 15px;
     box-shadow: 0 9px #999;
+    position: relative;
+    left: -65px;
   }
   
-  #reset:hover {background-color:  
-    rgb(199, 82, 82);
-}
+  #reset:hover {background-color:  rgb(240, 11, 11);}
   
   #reset:active {
-    background-color: rgb(199, 82, 82);
+    background-color: rgb(240, 11, 11);
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
@@ -45,4 +45,18 @@
     flex-direction: row;
     justify-content: center;
     padding-top: 40px;
+}
+
+#width{
+    margin-right: 20px;
+    height: 20px;
+    position: relative;
+    top: 8px;
+    left: -90px;
+    border-radius: 15px;
+    text-align: center;
+    outline: none;
+    height: 50px;
+    color: #666;
+    font-size: 30px;
 }

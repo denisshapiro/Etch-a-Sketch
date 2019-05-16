@@ -1,9 +1,11 @@
 let resetButton = document.getElementById("reset");
+let numberBox = document.getElementById("width");
+let gridContainer = document.getElementById("gridContainer");
 let numBoxes = 16;
 
-createGridDiv(numBoxes);
+createGridDiv();
 
-function createGridDiv(boxesPerSide){
+function createGridDiv(){
     for(let i = 0; i < numBoxes*numBoxes; i++){
         let div = document.createElement('div');
         div.style.backgroundColor = 'white';
@@ -30,7 +32,16 @@ resetButton.addEventListener('click', () => {
     });
 });
 
+numberBox.addEventListener('input', (e) => {
+    console.log(numberBox.value);
+    numBoxes = numberBox.value;
+    gridContainer.innerHTML = "";
+    createGridDiv();
+    gridContainer.style.gridTemplateColumns = `repeat(${numBoxes}, ${1}fr)`;
+    gridContainer.style.gridTemplateRows = `repeat(${numBoxes}, ${1}fr)`;
+});
 
-
+//style.gridTemplateColumns = `repeat(${newGrid}, ${800/newGrid}px)`
+//repeat(numboxes, 1fr);
 
 
