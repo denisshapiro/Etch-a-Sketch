@@ -36,10 +36,6 @@ function randomColor(){
     return '#' + Math.floor(Math.random()*16777215).toString(16);
 }
 
-function gradualBlack(){
-    this.style.filter = `brightness(${brightness-10}%)`;
-}
-
 radioBlack.addEventListener('input', (e) =>{
     gridContainer.innerHTML = "";
     createGridDiv();
