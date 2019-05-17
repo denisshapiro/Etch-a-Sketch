@@ -1,6 +1,8 @@
 let resetButton = document.getElementById("reset");
 let numberBox = document.getElementById("width");
 let gridContainer = document.getElementById("gridContainer");
+let radioBlack = document.getElementById("black");
+let radioRandom = document.getElementById("random");
 let numBoxes = 16;
 
 createGridDiv();
@@ -10,20 +12,43 @@ function createGridDiv(){
         let div = document.createElement('div');
         div.style.backgroundColor = 'white';
         div.classList.add('box');
+        div.style.filter = "brightness(100%)";
         div.addEventListener("mouseover", chooseColor);
         gridContainer.appendChild(div);
   }
 }
 
 function chooseColor(){
-    if(this.style.backgroundColor == "white"){
-        this.style.backgroundColor = randomColor();
+    if(radioBlack.checked){
+        if(this.style.backgroundColor != "black"){
+            let brightness = parseFloat(this.style.filter.match(/\d+/));
+            this.style.filter = `brightness(${brightness-10}%)`;
+        }
+    }
+    else if(radioRandom.checked){
+        if(this.style.backgroundColor == "white"){
+            this.style.backgroundColor = randomColor();
+        }
     }
 }
 
 function randomColor(){
     return '#' + Math.floor(Math.random()*16777215).toString(16);
 }
+
+function gradualBlack(){
+    this.style.filter = `brightness(${brightness-10}%)`;
+}
+
+radioBlack.addEventListener('input', (e) =>{
+    gridContainer.innerHTML = "";
+    createGridDiv();
+});
+
+radioRandom.addEventListener('input', (e) =>{
+    gridContainer.innerHTML = "";
+    createGridDiv();
+});
 
 resetButton.addEventListener('click', () => {
     const divs = document.querySelectorAll(".box");
@@ -40,8 +65,5 @@ numberBox.addEventListener('input', (e) => {
     gridContainer.style.gridTemplateColumns = `repeat(${numBoxes}, ${1}fr)`;
     gridContainer.style.gridTemplateRows = `repeat(${numBoxes}, ${1}fr)`;
 });
-
-//style.gridTemplateColumns = `repeat(${newGrid}, ${800/newGrid}px)`
-//repeat(numboxes, 1fr);
 
 

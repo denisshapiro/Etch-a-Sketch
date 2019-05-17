@@ -2,6 +2,7 @@
 
 <html>
     <head>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link href="style.css" type="text/css" rel="stylesheet">
         <title>Etch-a-Sketch</title>
     </head>
@@ -11,6 +12,20 @@
     <div id = "controls">
          <input id="width" name="width" type="number" min="1" max="100" value = "16"> 
          <button id = "reset">CLEAR</button>
+
+         <div id = "colorType"></div>
+         <ul>
+             <li>
+                <input type="radio" id="black" name="drawType"> 
+                <label for="black">Gradual Black</label>
+            </li>
+            <li>
+                <input type="radio" id="random" name="drawType" checked>
+                <label for="random">Random Color</label>
+            </li>
+        </ul>
+        </div>
+
     </div>
 
     <div class = "center-align">

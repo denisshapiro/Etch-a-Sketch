@@ -29,7 +29,7 @@
     border-radius: 15px;
     box-shadow: 0 9px #999;
     position: relative;
-    left: -65px;
+    left: 27px;
   }
   
   #reset:hover {background-color:  rgb(240, 11, 11);}
@@ -52,7 +52,7 @@
     height: 20px;
     position: relative;
     top: 8px;
-    left: -90px;
+    left: -45px;
     border-radius: 15px;
     text-align: center;
     outline: none;
@@ -60,3 +60,15 @@
     color: #666;
     font-size: 30px;
 }
+
+ul{
+    list-style: none;
+    position: relative;
+    left: 50px;
+}
+
+label{
+    font-family: 'Montserrat', sans-serif;
+    color: #666;
+}
+
