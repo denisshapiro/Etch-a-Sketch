@@ -50,6 +50,7 @@ resetButton.addEventListener('click', () => {
     const divs = document.querySelectorAll(".box");
     divs.forEach(box => {
         box.style.backgroundColor = 'white';
+        box.style.filter = "brightness(100%)";
     });
 });
 
